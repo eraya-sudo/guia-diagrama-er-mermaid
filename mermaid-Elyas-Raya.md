@@ -3,7 +3,11 @@ erDiagram
     PERSONATGE {
         string Dni PK
         string Nom
-        string Cognoms
+        string Cognom
+        string vida
+        string força
+        string agilitat 
+        string carisma 
     }
 
     Item {
