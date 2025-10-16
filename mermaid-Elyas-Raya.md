@@ -43,7 +43,10 @@ erDiagram
         string carisma 
     }
 
-    PERSONATGE ||--|{ Item : "els necessita per combatir"  
-    PERSONATGE ||--|{ Habilitat : "li dona poders"
-    PERSONATGE ||--|| Mascota : "el acompaña"
-    PERSONATGE ||--|{ Enemic : "lluita"
+    PERSONATGE ||--|{ Item : "equipa"  
+    PERSONATGE ||--|{ Habilitat : "poseeix"
+    PERSONATGE ||--|| Mascota : "acompaña"
+    PERSONATGE ||--|{ Enemic : "enfrenta"
+
+    Item |{--|| Mascota : "carrega"  
+    Habilitat |{--|{ Enemic: "li dona poders"
