@@ -5,45 +5,45 @@ erDiagram
         string Nom
         string Cognoms
     }
-    
+
     Item {
-        string Codi 
-        string Nom 
+        string Codi "not null"
+        string Nom "not null"
         string equipable
-        string Comerciable
-        string tipus
-        float pes
-        int qualitat
-        int mesures
-    }
-    
+        string Comerciable "not null"
+        string tipus "not null"
+        float pes "not null"
+        int qualitat "not null"
+        int mesures "not null"
+    } 
+
     Habilitat {
-        string Codi PK, FK
-        string Nom
+        string Codi PK, FK "not null"
+        string Nom "not null"
         float Cost
         string Dany
         string Cooldown
-        string tipus
+        string tipus "not null"
     }
 
     Mascota {
-        string Num_Chip
-        string Nom
+        string Num_Chip "not null"
+        string Nom "not null"
         String Motxila
     }
 
     Enemic {
-        string codi
-        string Nom
-        string tipus
-        string nivell
+        string codi "not null"
+        string Nom "not null"
+        string tipus "not null"
+        string nivell "not null"
         string vida 
         string força
         string agilitat 
         string carisma 
     }
 
-    PERSONATGE ||--|| Item : "és I/I"
-    PERSONATGE ||--|| Habilitat : "és I/I"
-    PERSONATGE ||--|| Mascota : "és un/I"
-    PERSONATGE ||--|| Enemic : "és I/I"
+    PERSONATGE ||--|{ Item : "els necessita per combatir"  
+    PERSONATGE ||--|{ Habilitat : "li dona poders"
+    PERSONATGE ||--|| Mascota : "el acompaña"
+    PERSONATGE ||--|{ Enemic : "lluita"
