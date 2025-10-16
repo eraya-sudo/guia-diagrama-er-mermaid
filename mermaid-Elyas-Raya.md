@@ -1,11 +1,11 @@
-'''mermaid
+```mermaid
 erDiagram
     PERSONATGE {
         string Dni PK
         string Nom
         string Cognoms
     }
-
+    
     Item {
         string Codi 
         string Nom 
@@ -16,7 +16,7 @@ erDiagram
         int qualitat
         int mesures
     }
-
+    
     Habilitat {
         string Codi PK, FK
         string Nom
